@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SL Computer Institute | Sanicherra Bazar</title>
+
+<meta name="description" content="SL Computer Institute, Sanicherra Bazar, Dharmanagar, North Tripura. Computer training courses including ADCA, DCA, ADIT, BCA, Tally Prime and Advanced Excel.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    line-height:1.6;
+    color:#222;
+    background:#f5f7fb;
+}
+
+header{
+    background:linear-gradient(135deg,#071952,#088395);
+    color:white;
+    padding:18px 6%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(0,0,0,.2);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1200px;
+    margin:auto;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#ffd43b;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:22px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffd43b;
+}
+
+.hero{
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(135deg,#071952,#0b7285,#12b886);
+    color:white;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-size:25px;
+    color:#ffe066;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+}
+
+.btn{
+    display:inline-block;
+    margin:25px 8px 0;
+    padding:13px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    background:#ffd43b;
+    color:#111;
+}
+
+.btn:hover{
+    transform:scale(1.04);
+}
+
+.btn.whatsapp{
+    background:#25D366;
+    color:white;
+}
+
+section{
+    padding:65px 6%;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title h2{
+    font-size:32px;
+    color:#071952;
+}
+
+.title p{
+    color:#666;
+}
+
+.about{
+    background:white;
+}
+
+.about-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.about-card{
+    padding:30px;
+    background:#f1f5ff;
+    border-radius:15px;
+}
+
+.about-card h3{
+    color:#088395;
+    margin-bottom:15px;
+}
+
+.courses{
+    background:#f5f7fb;
+}
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.course-card{
+    background:white;
+    padding:28px 20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.course-card:hover{
+    transform:translateY(-7px);
+}
+
+.course-icon{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.course-card h3{
+    color:#071952;
+    margin-bottom:10px;
+}
+
+.fees{
+    background:white;
+}
+
+.fee-box{
+    max-width:700px;
+    margin:auto;
+    background:#f1f5ff;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.fee-row{
+    display:flex;
+    justify-content:space-between;
+    padding:16px;
+    border-bottom:1px solid #ddd;
+    font-size:18px;
+}
+
+.fee-row:last-child{
+    border-bottom:none;
+}
+
+.admission{
+    background:#f5f7fb;
+}
+
+form{
+    max-width:750px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+textarea{
+    min-height:100px;
+}
+
+.submit{
+    width:100%;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    background:#071952;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.contact{
+    background:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-card{
+    text-align:center;
+    padding:25px;
+    background:#f1f5ff;
+    border-radius:15px;
+}
+
+.contact-card .icon{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.gallery{
+    background:#f5f7fb;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.gallery-box{
+    height:180px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#071952,#12b886);
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+footer{
+    background:#071952;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+footer p{
+    margin:6px;
+}
+
+.social{
+    margin:15px 0;
+}
+
+.social a{
+    display:inline-block;
+    margin:5px;
+    padding:10px 15px;
+    border-radius:8px;
+    background:#088395;
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .about-box,
+    .course-grid,
+    .contact-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:45px 5%;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+
+<div class="logo">
+SL <span>Computer Institute</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#courses">Courses</a>
+<a href="#fees">Fees</a>
+<a href="#admission">Admission</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>SL Computer Institute</h1>
+
+<h2>Learn Today • Build Your Future</h2>
+
+<p>
+Professional Computer Training Institute at
+<strong>Sanicherra Bazar, Dharmanagar, North Tripura</strong>.
+</p>
+
+<a href="#courses" class="btn">View Courses</a>
+
+<a href="#admission" class="btn whatsapp">Online Admission</a>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="title">
+<h2>About Us</h2>
+<p>Welcome to SL Computer Institute</p>
+</div>
+
+<div class="about-box">
+
+<div>
+<h3>SL Computer Institute</h3>
+
+<p>
+SL Computer Institute is a computer education and training centre
+located at Sanicherra Bazar, Dharmanagar, North Tripura.
+</p>
+
+<br>
+
+<p>
+We provide practical computer education for students,
+job seekers and beginners. Our courses focus on computer
+fundamentals, office applications, accounting and professional
+computer skills.
+</p>
+</div>
+
+<div class="about-card">
+
+<h3>Why Choose Us?</h3>
+
+<p>✔ Practical Computer Training</p>
+<p>✔ Experienced Trainers</p>
+<p>✔ Affordable Fees</p>
+<p>✔ Career-Oriented Courses</p>
+<p>✔ Certificate After Course Completion</p>
+<p>✔ Friendly Learning Environment</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COURSES -->
+
+<section class="courses" id="courses">
+
+<div class="container">
+
+<div class="title">
+<h2>Our Courses</h2>
+<p>Choose the right course for your career</p>
+</div>
+
+<div class="course-grid">
+
+<div class="course-card">
+<div class="course-icon">💻</div>
+<h3>ADCA</h3>
+<p>Advanced Diploma in Computer Applications</p>
+</div>
+
+<div class="course-card">
+<div class="course-icon">🖥️</div>
+<h3>DCA</h3>
+<p>Diploma in Computer Applications</p>
+</div>
+
+<div class="course-card">
+<div class="course-icon">📚</div>
+<h3>ADIT</h3>
+<p>Advanced Diploma in Information Technology</p>
+</div>
+
+<div class="course-card">
+<div class="course-icon">🎓</div>
+<h3>BCA</h3>
+<p>Bachelor of Computer Applications</p>
+</div>
+
+<div class="course-card">
+<div class="course-icon">📊</div>
+<h3>Tally Prime</h3>
+<p>Accounting, GST and Business Management</p>
+</div>
+
+<div class="course-card">
+<div class="course-icon">📈</div>
+<h3>Advanced Excel</h3>
+<p>Advanced Excel, Formulas, Reports and Data Management</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEES -->
+
+<section class="fees" id="fees">
+
+<div class="container">
+
+<div class="title">
+<h2>Course Fees</h2>
+<p>Affordable computer education</p>
+</div>
+
+<div class="fee-box">
+
+<div class="fee-row">
+<strong>Admission Fee</strong>
+<strong>₹700</strong>
+</div>
+
+<div class="fee-row">
+<strong>Monthly Fee</strong>
+<strong>₹600</strong>
+</div>
+
+<p style="margin-top:20px;">
+For complete course fee and duration, please contact the institute.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ADMISSION -->
+
+<section class="admission" id="admission">
+
+<div class="container">
+
+<div class="title">
+<h2>Online Admission</h2>
+<p>Fill up the form to enquire about admission</p>
+</div>
+
+<form onsubmit="submitForm(event)">
+
+<div class="form-group">
+<label>Student Name</label>
+<input type="text" id="name" placeholder="Enter your name" required>
+</div>
+
+<div class="form-group">
+<label>Mobile Number</label>
+<input type="tel" id="phone" placeholder="Enter mobile number" required>
+</div>
+
+<div class="form-group">
+<label>Select Course</label>
+
+<select id="course" required>
+
+<option value="">-- Select Course --</option>
+<option>ADCA</option>
+<option>DCA</option>
+<option>ADIT</option>
+<option>BCA</option>
+<option>Tally Prime</option>
+<option>Advanced Excel</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+<label>Address</label>
+<textarea id="address" placeholder="Enter your address"></textarea>
+</div>
+
+<button class="submit" type="submit">
+Submit Admission Enquiry
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+<div class="container">
+
+<div class="title">
+<h2>Gallery</h2>
+<p>Our Institute</p>
+</div>
+
+<div class="gallery-grid">
+
+<div class="gallery-box">Computer Lab</div>
+
+<div class="gallery-box">Classroom</div>
+
+<div class="gallery-box">Student Training</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="title">
+<h2>Contact Us</h2>
+<p>Get in touch with SL Computer Institute</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<div class="icon">📍</div>
+
+<h3>Address</h3>
+
+<p>
+Sanicherra Bazar,<br>
+Dharmanagar,<br>
+North Tripura, Tripura
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="icon">📞</div>
+
+<h3>Phone</h3>
+
+<p>
+Contact us for admission,
+course details and fees.
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="icon">💬</div>
+
+<h3>WhatsApp</h3>
+
+<p>
+Click below to contact us
+on WhatsApp.
+</p>
+
+<a class="btn whatsapp"
+href="https://wa.me/91XXXXXXXXXX"
+target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>SL Computer Institute</h2>
+
+<p>Sanicherra Bazar, Dharmanagar, North Tripura</p>
+
+<div class="social">
+
+<a href="#home">Home</a>
+<a href="#courses">Courses</a>
+<a href="#admission">Admission</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<p>© 2026 SL Computer Institute. All Rights Reserved.</p>
+
+</footer>
+
+
+<script>
+
+function submitForm(event){
+
+event.preventDefault();
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let course = document.getElementById("course").value;
+
+let message =
+"SL Computer Institute Admission Enquiry%0A%0A" +
+"Student Name: " + name + "%0A" +
+"Mobile: " + phone + "%0A" +
+"Course: " + course;
+
+let whatsappNumber = "918787631261";
+
+window.open(
+"https://wa.me/" + whatsappNumber + "?text=" + message,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
